@@ -9,25 +9,31 @@ import { PostsService } from './posts.service';
 
 // Imports commented out for brevity
 import { RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
 
 
 // Define the routes
 const ROUTES = [
   {
     path: '',
-    redirectTo: 'posts',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
     path: 'posts',
     component: PostsComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostsComponent
+    PostsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
